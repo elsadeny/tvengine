@@ -5,6 +5,8 @@ rtmpServer.on('error', err => {
   throw err;
 });
 
+var port = process.env.PORT || 1935;
+
 rtmpServer.on('client', client => {
   //client.on('command', command => {
   //  console.log(command.cmd, command);
@@ -27,4 +29,4 @@ rtmpServer.on('client', client => {
   });
 });
 
-rtmpServer.listen(1935);
+rtmpServer.listen(port);
